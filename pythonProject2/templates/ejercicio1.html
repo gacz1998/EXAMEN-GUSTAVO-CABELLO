@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <form method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required><br>
+        <label>Edad:</label>
+        <input type="number" name="edad" required><br>
+        <label>Cantidad de tarros:</label>
+        <input type="number" name="cantidad" required><br>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if nombre %}
+        <h3>Resultado:</h3>
+        <p>Nombre: {{ nombre }}</p>
+        <p>Total sin descuento: ${{ total_sin_descuento }}</p>
+        <p>Total con descuento: ${{ total_con_descuento }}</p>
+    {% endif %}
+</body>
+</html>
